@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>YOUR_NAME | Software Engineer</title>
+
+  <meta name="description" content="Portfolio of YOUR_NAME – Software Engineer skilled in JavaScript, problem-solving, and cloud deployment">
+  <meta name="keywords" content="Software Engineer, JavaScript, AWS, HTML, CSS, Portfolio">
+  <meta name="author" content="YOUR_NAME">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <style>
+    :root {
+      --primary: #00eaff;
+      --glass: rgba(255,255,255,0.12);
+      --dark: #0f2027;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      backdrop-filter: blur(12px);
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav li {
+      cursor: pointer;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav li:hover {
+      color: var(--primary);
+    }
+
+    section {
+      padding: 100px 60px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 40px;
+      margin-bottom: 60px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background: var(--primary);
+      color: #000;
+      border-radius: 30px;
+      font-weight: 600;
+      margin-top: 15px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,234,255,0.4);
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding-top: 140px;
+    }
+
+    .hero-text {
+      max-width: 620px;
+    }
+
+    .hero-text h1 {
+      font-size: 52px;
+      line-height: 1.2;
+    }
+
+    .hero-text span {
+      color: var(--primary);
+    }
+
+    .hero-text p {
+      margin: 20px 0;
+      opacity: 0.9;
+    }
+
+    .hero-img img {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      border: 6px solid var(--primary);
+      object-fit: cover;
+      box-shadow: 0 0 40px rgba(0,234,255,0.5);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: var(--glass);
+      padding: 30px;
+      border-radius: 20px;
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,234,255,0.3);
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: var(--primary);
+      font-weight: 500;
+    }
+
+    .skill {
+      margin-bottom: 25px;
+    }
+
+    .bar {
+      background: rgba(255,255,255,0.25);
+      height: 12px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 6px;
+    }
+
+    .fill {
+      height: 100%;
+      width: 0;
+      background: var(--primary);
+      transition: width 1.5s ease;
+    }
+
+    form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 14px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      font-family: inherit;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      opacity: 0.7;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: 1s;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        padding: 20px;
+      }
+
+      .hero {
+        text-align: center;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <strong>YOUR_NAME</strong>
+  <ul>
+    <li onclick="go('home')">Home</li>
+    <li onclick="go('projects')">Projects</li>
+    <li onclick="go('skills')">Skills</li>
+    <li onclick="go('contact')">Contact</li>
+  </ul>
+</nav>
+
+<section id="home" class="hero reveal">
+  <div class="hero-text">
+    <h1>Hi, I'm <span>YOUR_NAME</span></h1>
+    <p>
+      Software Engineer with a strong foundation in JavaScript, 
+      problem-solving, and cloud-based deployments. 
+      I build reliable, scalable web applications with clean, maintainable code.
+    </p>
+    <a href="cv.pdf" class="btn" download>Download CV</a>
+  </div>
+
+  <div class="hero-img">
+    <img src="profile.jpg" alt="Profile Photo">
+  </div>
+</section>
+
+<section id="projects" class="reveal">
+  <h2>Projects</h2>
+  <div class="grid" id="projectGrid"></div>
+</section>
+
+<section id="skills" class="reveal">
+  <h2>Engineering Skills</h2>
+
+  <div class="skill">JavaScript (ES6+, Async, APIs)
+    <div class="bar"><div class="fill" data-width="90%"></div></div>
+  </div>
+
+  <div class="skill">Software Design & Problem Solving
+    <div class="bar"><div class="fill" data-width="85%"></div></div>
+  </div>
+
+  <div class="skill">HTML5 / CSS3 (Semantic, Responsive)
+    <div class="bar"><div class="fill" data-width="90%"></div></div>
+  </div>
+
+  <div class="skill">Git & GitHub (Version Control)
+    <div class="bar"><div class="fill" data-width="80%"></div></div>
+  </div>
+
+  <div class="skill">AWS (S3 Static Hosting)
+    <div class="bar"><div class="fill" data-width="75%"></div></div>
+  </div>
+</section>
+
+<section id="contact" class="reveal">
+  <h2>Contact Me</h2>
+  <form id="contactForm">
+    <input name="name" placeholder="Your Name" required>
+    <input name="email" type="email" placeholder="Email" required>
+    <textarea name="message" rows="5" placeholder="Message"></textarea>
+    <button class="btn" type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 YOUR_NAME · Software Engineer
+</footer>
+
+<script>
+  function go(id) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        entry.target.querySelectorAll('.fill').forEach(bar => {
+          bar.style.width = bar.dataset.width;
+        });
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  const GITHUB_USERNAME = "SayanBanerjee100";
+
+  fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated`)
+    .then(res => res.json())
+    .then(repos => {
+      document.getElementById('projectGrid').innerHTML =
+        repos.slice(0, 6).map(repo => `
+          <div class="card">
+            <h3>${repo.name}</h3>
+            <p>
+              • Designed and implemented core logic using JavaScript<br>
+              • Integrated REST APIs and handled async data flows<br>
+              • Focused on performance and clean architecture
+            </p>
+            <a href="${repo.html_url}" target="_blank">View Source Code</a>
+          </div>
+        `).join('');
+    });
+
+  (function(){
+    emailjs.init("YOUR_PUBLIC_KEY"); 
+  })();
+
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    emailjs.sendForm(
+      "YOUR_SERVICE_ID",
+      "YOUR_TEMPLATE_ID",
+      this
+    ).then(() => {
+      alert("Message sent successfully!");
+      this.reset();
+    });
+  });
+</script>
+
+</body>
+</html>
