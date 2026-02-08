@@ -1,8 +1,8 @@
 export default function Certificates() {
   const certificates = [
-    { name: "AWS Certificate", file: "/cert1.pdf" },
-    { name: "Docker Certificate", file: "/cert2.pdf" },
-    { name: "Java Certificate", file: "/cert3.png" }
+    { name: "JPMorgan Certificate", file: "/JPMorgan Software Engineering.pdf" },
+    { name: "Oracle Cloud AI Foundations", file: "/Oracle Cloud AI Foundations Associate.pdf" },
+    { name: "Walmart Certificate", file: "/Walmart.pdf" }
   ];
 
   return (
@@ -13,7 +13,10 @@ export default function Certificates() {
         {certificates.map((cert, index) => (
           <div className="card" key={index}>
             <h3>{cert.name}</h3>
-            <a href={cert.file} target="_blank">View</a>
+            <div className="cert-actions">
+              <a href={cert.file} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">View</a>
+              <a href={cert.file} download className="btn btn-primary">Download</a>
+            </div>
           </div>
         ))}
       </div>

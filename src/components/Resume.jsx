@@ -4,16 +4,13 @@ export default function Resume() {
       <h2>Resume</h2>
 
       <div className="resume-box">
-        <iframe
-          src="/resume.pdf"
-          title="Resume"
-          width="100%"
-          height="500px"
-        ></iframe>
+        <div className="resume-preview">
+          <p>Download my CV below:</p>
+        </div>
 
-        <a href="/resume.pdf" className="btn" download>
-          Download Resume
-        </a>
+        <div className="resume-actions">
+          <a href="/Sayan_Banerjee_CV.docx" download className="btn btn-primary">📄 Download CV (DOCX)</a>
+        </div>
       </div>
     </section>
   );

@@ -3,9 +3,7 @@ export default function About() {
     <section id="about" className="section">
       <h2>About Me</h2>
       <p>
-        I am a fresher backend and cloud developer skilled in Spring Boot,
-        Docker, Kubernetes, AWS, and CI/CD. I focus on building scalable,
-        production-ready applications.
+        I'm a fresher developer passionate about building backend applications with Spring Boot and exploring cloud technologies like AWS and Docker. I'm actively learning best practices in application development and DevOps, with hands-on experience in building REST APIs and deploying applications. I'm eager to grow my skills through real-world projects and contribution to meaningful work.
       </p>
     </section>
   );

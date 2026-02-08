@@ -49,8 +49,64 @@ body {
   margin: 10px;
   text-decoration: none;
   border-radius: 5px;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #0ea5e9;
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: #38bdf8;
+  color: black;
+}
+
+.btn-secondary {
+  background: #1e293b;
+  color: #38bdf8;
+  border: 2px solid #38bdf8;
+}
+
+.btn-secondary:hover {
+  background: #38bdf8;
+  color: black;
+}
+
+.cert-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.cert-actions a {
+  flex: 1;
+  text-align: center;
 }
 
 .resume-box {
   margin-top: 20px;
+  text-align: center;
+}
+
+.resume-preview {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #e2e8f0;
+}
+
+.resume-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.resume-actions a {
+  padding: 12px 30px;
 }
