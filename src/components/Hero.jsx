@@ -35,10 +35,6 @@ export default function Hero() {
             onError={() => setProfileImage("https://via.placeholder.com/150?text=Your+Photo")}
           />
         )}
-        <br />
-        <label htmlFor="photo-upload" className="upload-photo-btn">
-          📸 Upload Photo
-        </label>
         <input
           id="photo-upload"
           type="file"
@@ -47,11 +43,11 @@ export default function Hero() {
           onChange={handlePhotoUpload}
         />
       </div>
-      <h1>Hi, I'm Sayan 👋</h1>
-      <p>Aspiring Software Engineer | Spring Boot | Cloud & DevOps</p>
+      <h1>Hi, I'm Sayan Banerjee 👋</h1>
+      <p>Software Engineer | Strong Foundations in Backend & Cloud | Eager to Learn & Grow</p>
       <div className="btn-group">
         <a href="#projects" className="btn btn-primary">View Projects</a>
-        <a href="/resume.pdf" className="btn btn-secondary" target="_blank">Download Resume</a>
+        <a href="/Sayan_Banerjee_CV.docx" className="btn btn-primary" download>Download Resume</a>
       </div>
     </section>
   );

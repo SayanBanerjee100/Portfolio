@@ -2,25 +2,25 @@ export default function Certificates() {
   const certificates = [
     {
       name: "🏆 Hackathon Finalist",
-      description: "Recognized as finalist in a competitive hackathon event",
+      description: "Led a 3-member team in the design and development of a Phishing Link and Email Detection web application aimed at identifying fraudulent links and emails. Implemented process improvements and automation solutions, resulting in 15% increase in productivity.",
       file: "/hackathon-certificate.jpg",
       category: "Featured"
     },
     {
       name: "JPMorgan Software Engineering",
-      description: "Software Engineering Virtual Internship",
+      description: "Worked on practical software engineering challenges, focusing on backend logic, debugging, and system design concepts used in enterprise-scale applications.",
       file: "/JPMorgan Software Engineering.pdf",
       category: "Internship"
     },
     {
       name: "Oracle Cloud AI Foundations",
-      description: "Oracle Cloud AI Foundations Associate",
+      description: "Gained foundational knowledge of cloud computing concepts, AI services, machine learning basics, and Oracle Cloud Infrastructure core services.",
       file: "/Oracle Cloud AI Foundations Associate.pdf",
       category: "Cloud"
     },
     {
       name: "Walmart Certificate",
-      description: "Walmart Advanced Software Engineering Program",
+      description: "Completed advanced software engineering tasks involving problem-solving, code optimization, and real-world engineering workflows aligned with industry standards.",
       file: "/Walmart.pdf",
       category: "Internship"
     }

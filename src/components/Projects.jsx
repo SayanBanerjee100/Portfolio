@@ -5,15 +5,21 @@ export default function Projects() {
 
       <div className="grid">
         <div className="card">
-          <h3>Journal App</h3>
-          <p>Spring Boot, MongoDB, Docker, AWS, CI/CD</p>
-          <a href="#" target="_blank">GitHub</a>
+          <h3>Phishing Link and Email Detector</h3>
+          <p>Web Application | React</p>
+          <div className="cert-actions">
+            <a href="https://main.d336fc2r5vjb84.amplifyapp.com" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Live Demo</a>
+            <a href="#" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">GitHub</a>
+          </div>
         </div>
 
         <div className="card">
-          <h3>Portfolio Website</h3>
-          <p>React, HTML, CSS, JavaScript</p>
-          <a href="#" target="_blank">Live Demo</a>
+          <h3>Journal App</h3>
+          <p>Spring Boot, MongoDB, Docker, AWS, CI/CD</p>
+          <div className="cert-actions">
+            <a href="https://journalapp-1-k4t0.onrender.com" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Live Demo</a>
+            <a href="#" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">GitHub</a>
+          </div>
         </div>
       </div>
     </section>

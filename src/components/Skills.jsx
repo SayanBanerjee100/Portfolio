@@ -29,9 +29,8 @@ export default function Skills() {
           <h3>Frontend</h3>
           <ul>
             <li>HTML & CSS</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Responsive Design</li>
+            <li>JavaScript Fundamentals</li>
+            <li>React Basics</li>
           </ul>
         </div>
       </div>
