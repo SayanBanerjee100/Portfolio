@@ -9,7 +9,7 @@ export default function Projects() {
           <p>Web Application | React</p>
           <div className="cert-actions">
             <a href="https://main.d336fc2r5vjb84.amplifyapp.com" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Live Demo</a>
-            <a href="#" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">GitHub</a>
+            <a href="https://github.com/SayanBanerjee100/PhishingDetector" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">GitHub</a>
           </div>
         </div>
 
@@ -18,7 +18,7 @@ export default function Projects() {
           <p>Spring Boot, MongoDB, Docker, AWS, CI/CD</p>
           <div className="cert-actions">
             <a href="https://journalapp-1-k4t0.onrender.com" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Live Demo</a>
-            <a href="#" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">GitHub</a>
+            <a href="https://github.com/SayanBanerjee100/journalApp" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">GitHub</a>
           </div>
         </div>
       </div>
