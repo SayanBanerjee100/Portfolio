@@ -4,7 +4,7 @@ export default function Certificates() {
       name: "🏆 Hackathon Finalist",
       description: "Led a 3-member team in the design and development of a Phishing Link and Email Detection web application aimed at identifying fraudulent links and emails. Implemented process improvements and automation solutions, resulting in 15% increase in productivity.",
       file: "/hackathon-certificate.jpg",
-      category: "Featured"
+      category: "Achievement"
     },
     {
       name: "JPMorgan Software Engineering",
@@ -16,7 +16,7 @@ export default function Certificates() {
       name: "Oracle Cloud AI Foundations",
       description: "Gained foundational knowledge of cloud computing concepts, AI services, machine learning basics, and Oracle Cloud Infrastructure core services.",
       file: "/Oracle Cloud AI Foundations Associate.pdf",
-      category: "Cloud"
+      category: "Certificate"
     },
     {
       name: "Walmart Certificate",
@@ -32,25 +32,19 @@ export default function Certificates() {
 
       <div className="grid">
         {certificates.map((cert, index) => (
-          <div className="card" key={index}>
-            <h3>{cert.name}</h3>
+          <div className="card cert-card" key={index}>
+            <div className="cert-header">
+              <h3>{cert.name}</h3>
+              <span className={`cert-badge ${cert.category.toLowerCase()}`}>
+                {cert.category}
+              </span>
+            </div>
             <p style={{ 
               color: "#94a3b8", 
               fontSize: "14px",
-              marginBottom: "15px"
+              lineHeight: "1.6"
             }}>
               {cert.description}
-            </p>
-            <p style={{
-              display: "inline-block",
-              background: "rgba(56, 189, 248, 0.2)",
-              padding: "4px 12px",
-              borderRadius: "20px",
-              fontSize: "12px",
-              color: "#38bdf8",
-              marginBottom: "15px"
-            }}>
-              {cert.category}
             </p>
             <div className="cert-actions">
               <a href={cert.file} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">View</a>

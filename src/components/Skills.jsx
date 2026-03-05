@@ -1,38 +1,48 @@
 export default function Skills() {
+  const skillCategories = [
+    {
+      title: "Languages & Frameworks",
+      skills: ["Java", "Spring Boot"],
+      icon: "⚙️"
+    },
+    {
+      title: "Databases & DBMS", 
+      skills: ["PostgreSQL", "MongoDB", "DBMS Concepts"],
+      icon: "🗄️"
+    },
+    {
+      title: "Cloud & DevOps",
+      skills: ["AWS", "Docker", "CI/CD Fundamentals", "Git", "Github"],
+      icon: "☁️"
+    },
+    {
+      title: "Computer Science Fundamentals",
+      skills: ["DSA", "OS", "CN", "System Design Fundamentals"],
+      icon: "🧠"
+    }
+  ];
+
   return (
     <section id="skills" className="section">
-      <h2>Skills</h2>
+      <h2>Skills & Expertise</h2>
 
       <div className="grid">
-        <div>
-          <h3>Backend</h3>
-          <ul>
-            <li>Java</li>
-            <li>Spring Boot</li>
-            <li>REST APIs</li>
-            <li>PostgreSQL & MongoDB</li>
-            <li>JPA/Hibernate</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3>Cloud & DevOps</h3>
-          <ul>
-            <li>Docker</li>
-            <li>AWS Basics (EC2, S3)</li>
-            <li>Git & GitHub</li>
-            <li>Basic CI/CD</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3>Frontend</h3>
-          <ul>
-            <li>HTML & CSS</li>
-            <li>JavaScript Fundamentals</li>
-            <li>React Basics</li>
-          </ul>
-        </div>
+        {skillCategories.map((category, idx) => (
+          <div key={idx} className="skill-card">
+            <div className="skill-header">
+              <span className="skill-icon">{category.icon}</span>
+              <h3>{category.title}</h3>
+            </div>
+            <div className="skill-list">
+              {category.skills.map((skill, i) => (
+                <div key={i} className="skill-badge">
+                  <span className="skill-dot"></span>
+                  {skill}
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
