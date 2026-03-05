@@ -10,7 +10,7 @@ export default function Certificates() {
       name: "JPMorgan Software Engineering",
       description: "Worked on practical software engineering challenges, focusing on backend logic, debugging, and system design concepts used in enterprise-scale applications.",
       file: "/JPMorgan Software Engineering.pdf",
-      category: "Internship"
+      category: "Certificate"
     },
     {
       name: "Oracle Cloud AI Foundations",
@@ -22,7 +22,7 @@ export default function Certificates() {
       name: "Walmart Certificate",
       description: "Completed advanced software engineering tasks involving problem-solving, code optimization, and real-world engineering workflows aligned with industry standards.",
       file: "/Walmart.pdf",
-      category: "Internship"
+      category: "Certificate"
     }
   ];
 

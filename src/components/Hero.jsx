@@ -47,7 +47,6 @@ export default function Hero() {
       <p>Software Engineer | Strong Foundations in Backend & Cloud | Eager to Learn & Grow</p>
       <div className="btn-group">
         <a href="#projects" className="btn btn-primary">View Projects</a>
-        <a href="/Sayan_Banerjee_CV.docx" className="btn btn-primary" download>Download Resume</a>
       </div>
       <a href="#projects" className="scroll-down" aria-label="Scroll down">↓</a>
     </section>

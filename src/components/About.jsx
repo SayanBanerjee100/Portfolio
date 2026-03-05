@@ -9,7 +9,7 @@ export default function About() {
         maxWidth: "800px",
         margin: "0 auto"
       }}>
-        I'm a fresher software engineer with strong foundational knowledge in backend development using Spring Boot and a growing interest in cloud technologies. I have hands-on experience building RESTful APIs, working with databases, and deploying containerized applications using Docker. I'm actively learning about AWS and DevOps practices to expand my understanding of cloud-native applications.
+        I'm a fresher software engineer passionate about backend development with strong foundational knowledge in Spring Boot. I have hands-on experience building RESTful APIs, working with databases like MongoDB and MySQL, and containerizing applications with Docker. I'm eager to learn cloud technologies and DevOps practices while writing clean, maintainable code.
       </p>
       <p style={{
         fontSize: "16px",
@@ -18,7 +18,7 @@ export default function About() {
         maxWidth: "800px",
         margin: "20px auto 0"
       }}>
-        I'm driven by a strong desire to write clean, maintainable code and contribute to meaningful projects. I'm always eager to learn from experienced developers, take on new challenges, and continuously improve my skills. I'm open to feedback and committed to growing as a software engineer.
+        I'm committed to continuous learning and growth, always ready to take on new challenges and collaborate with experienced developers. I believe in writing quality code, understanding system design, and contributing meaningfully to projects that matter.
       </p>
     </section>
   );
