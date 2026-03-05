@@ -8,7 +8,7 @@ export default function Contact() {
         marginBottom: "40px",
         lineHeight: "1.8"
       }}>
-        I'd love to hear from you! Whether you have questions, opportunities, or just want to collaborate, feel free to reach out.
+        As a fresher software engineer, I'm eager to contribute meaningfully to a collaborative team. I'm passionate about learning from experienced developers and building impactful solutions together. Let's connect and explore opportunities to grow and innovate!
       </p>
       <div className="contact-card">
         <div className="email-section">
