@@ -21,7 +21,7 @@ export default function Navbar() {
       setScrolled(window.scrollY > 50);
       
       // Detect active section
-      const sections = ["about", "skills", "projects", "certificates", "contact"];
+      const sections = ["about", "skills", "education", "projects", "certificates", "contact"];
       for (let section of sections) {
         const element = document.getElementById(section);
         if (element) {
@@ -44,6 +44,7 @@ export default function Navbar() {
   const navItems = [
     { label: "About", href: "#about", id: "about" },
     { label: "Skills", href: "#skills", id: "skills" },
+    { label: "Education", href: "#education", id: "education" },
     { label: "Projects", href: "#projects", id: "projects" },
     { label: "Certificates", href: "#certificates", id: "certificates" },
     { label: "Contact", href: "#contact", id: "contact" }
