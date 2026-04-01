@@ -29,8 +29,8 @@ export default function Hero() {
 
       const reader = new FileReader();
       reader.onloadend = () => {
-        setProfileImage(reader.result as string);
-        localStorage.setItem("profileImage", reader.result as string);
+        setProfileImage(reader.result);
+        localStorage.setItem("profileImage", reader.result);
       };
       reader.readAsDataURL(file);
     }
