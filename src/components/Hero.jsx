@@ -1,41 +1,6 @@
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function Hero() {
-  const [profileImage, setProfileImage] = useState("/profile.jpg");
-
-  useEffect(() => {
-    const savedImage = localStorage.getItem("profileImage");
-    if (savedImage) {
-      setProfileImage(savedImage);
-    }
-  }, []);
-
-  const handlePhotoUpload = (event) => {
-    const file = event.target.files[0];
-    if (file) {
-      const maxSize = 5 * 1024 * 1024; // 5MB
-      const allowedTypes = ['image/jpeg', 'image/png', 'image/webp', 'image/gif'];
-
-      if (!allowedTypes.includes(file.type)) {
-        alert('Please select a valid image file (JPEG, PNG, WebP, or GIF).');
-        return;
-      }
-
-      if (file.size > maxSize) {
-        alert('File size must be less than 5MB.');
-        return;
-      }
-
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setProfileImage(reader.result);
-        localStorage.setItem("profileImage", reader.result);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
   return (
     <motion.section 
       className="hero"
@@ -43,52 +8,81 @@ export default function Hero() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <motion.div 
-        className="profile-image-container"
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ delay: 0.2, duration: 0.5 }}
-      >
-        {profileImage && profileImage !== "/profile.jpg" ? (
-          <img src={profileImage} alt="Profile" className="profile-image" />
-        ) : (
-          <img 
-            src={profileImage} 
-            alt="Profile" 
-            className="profile-image"
-            onError={() => setProfileImage("https://via.placeholder.com/150?text=Your+Photo")}
-          />
-        )}
-        <input
-          id="photo-upload"
-          type="file"
-          accept="image/*"
-          className="photo-upload-input"
-          onChange={handlePhotoUpload}
-        />
-      </motion.div>
-      <motion.h1 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.4, duration: 0.8 }}
-      >
-        Hi, I'm Sayan Banerjee 👋
-      </motion.h1>
-      <motion.p 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.6, duration: 0.8 }}
-      >
-        Software Engineer | Strong Foundations in Backend & Cloud | Eager to Learn & Grow
-      </motion.p>
-      <motion.div 
-        className="btn-group"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.8, duration: 0.8 }}
-      >
-        <a href="#projects" className="btn btn-primary">View Projects</a>
-      </motion.div>
+      <div className="floating-shapes">
+        <div className="shape shape-1"></div>
+        <div className="shape shape-2"></div>
+        <div className="shape shape-3"></div>
+        <div className="shape shape-4"></div>
+        <div className="shape shape-5"></div>
+      </div>
+
+      <div className="hero-grid">
+        <div className="hero-copy">
+          <motion.h1 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+          >
+            Hi, I'm Sayan Banerjee 👋
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
+          >
+            Software Engineer with a strong foundation in backend systems, Spring Boot, and cloud-ready architecture. I build fast, reliable APIs and deliver polished digital experiences.
+          </motion.p>
+
+          <motion.div 
+            className="btn-group"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8, duration: 0.8 }}
+          >
+            <a href="#projects" className="btn btn-primary">View Projects</a>
+            <a href="#contact" className="btn btn-secondary">Get In Touch</a>
+          </motion.div>
+        </div>
+
+        <motion.div
+          className="hero-panel"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+        >
+          <motion.div 
+            className="profile-image-container"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+          >
+            <img 
+              src="/profile.jpg" 
+              alt="Profile" 
+              className="profile-image"
+              onError={(e) => e.target.src = "https://via.placeholder.com/240?text=Your+Photo"}
+            />
+          </motion.div>
+
+          <p className="section-intro" style={{ marginTop: '24px' }}>
+            Backend + Cloud focused developer with experience in Spring Boot, Docker, AWS, and REST architecture. Ready to bring strong engineering habits and polished execution to your next team.
+          </p>
+
+          <div className="grid" style={{ gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: '16px', marginTop: '24px' }}>
+            <div className="highlight-item">
+              <span className="highlight-icon">⚙️</span>
+              <h4>Spring Boot APIs</h4>
+              <p>Clean, scalable backend design for web apps.</p>
+            </div>
+            <div className="highlight-item">
+              <span className="highlight-icon">☁️</span>
+              <h4>Cloud Ready</h4>
+              <p>Docker, AWS, and infrastructure-aware build practices.</p>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
       <motion.a 
         href="#projects" 
         className="scroll-down" 

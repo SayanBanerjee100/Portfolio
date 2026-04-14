@@ -1,33 +1,165 @@
+import { useState } from "react";
+import { motion } from "framer-motion";
+
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: ""
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    setTimeout(() => {
+      setSubmitMessage("Thank you for your message! I'll get back to you soon.");
+      setFormData({ name: "", email: "", subject: "", message: "" });
+      setIsSubmitting(false);
+      setTimeout(() => setSubmitMessage(""), 5000);
+    }, 2000);
+  };
+
   return (
-    <section id="contact" className="section contact-section" style={{ textAlign: "center" }}>
-      <h2>Get In Touch</h2>
-      <p style={{
-        fontSize: "18px",
-        color: "#cbd5e1",
-        marginBottom: "40px",
-        lineHeight: "1.8"
-      }}>
-        As a fresher software engineer, I'm eager to contribute meaningfully to a collaborative team. I'm passionate about learning from experienced developers and building impactful solutions together. Let's connect and explore opportunities to grow and innovate!
-      </p>
-      <div className="contact-card">
-        <div className="email-section">
-          <span style={{ fontSize: "24px", marginRight: "12px" }}>📧</span>
-          <div>
-            <p style={{ fontSize: "14px", color: "#94a3b8", margin: "0 0 8px 0" }}>Email Me At</p>
-            <a href="mailto:sayanbanerjee382@gmail.com" style={{ 
-              color: "#38bdf8",
-              fontSize: "18px",
-              fontWeight: "600",
-              textDecoration: "none",
-              transition: "color 0.3s ease"
-            }}>
-              sayanbanerjee382@gmail.com
-            </a>
+    <section id="contact" className="section contact-section">
+      <motion.h2
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        Get In Touch
+      </motion.h2>
+      <motion.p
+        className="section-intro"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        As a fresher software engineer, I'm eager to contribute meaningfully to a collaborative team. I'm passionate about learning from experienced developers and building impactful solutions together.
+      </motion.p>
+
+      <div className="contact-wrapper">
+        <motion.div
+          className="contact-card"
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <div className="email-section">
+            <span style={{ fontSize: "26px" }}>📧</span>
+            <div>
+              <p style={{ fontSize: "14px", color: "#94a3b8", margin: 0 }}>Email Me At</p>
+              <a href="mailto:sayanbanerjee382@gmail.com" style={{ 
+                color: "#38bdf8",
+                fontSize: "18px",
+                fontWeight: "600",
+                textDecoration: "none"
+              }}>
+                sayanbanerjee382@gmail.com
+              </a>
+            </div>
           </div>
-        </div>
+          <div style={{ marginTop: '20px' }}>
+            <p style={{ margin: 0, color: '#cbd5e1', lineHeight: '1.8' }}>
+              Ready to discuss backend engineering, cloud projects, internships, or collaboration opportunities.
+            </p>
+          </div>
+        </motion.div>
+
+        <motion.form
+          onSubmit={handleSubmit}
+          className="contact-card"
+          style={{ maxWidth: "100%", width: "100%" }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <h3 style={{ color: "#38bdf8", marginBottom: "22px" }}>Send a Message</h3>
+          
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px", marginBottom: "20px" }}>
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              className="input-field"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              className="input-field"
+            />
+          </div>
+          
+          <input
+            type="text"
+            name="subject"
+            placeholder="Subject"
+            value={formData.subject}
+            onChange={handleChange}
+            required
+            className="input-field"
+          />
+          
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+            rows="5"
+            className="textarea-field"
+          />
+          
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className="btn btn-primary"
+            style={{
+              width: "100%",
+              opacity: isSubmitting ? 0.7 : 1,
+              cursor: isSubmitting ? "not-allowed" : "pointer"
+            }}
+          >
+            {isSubmitting ? "Sending..." : "Send Message"}
+          </button>
+          
+          {submitMessage && (
+            <p style={{ color: "#10b981", marginTop: "18px", fontWeight: "500" }}>
+              {submitMessage}
+            </p>
+          )}
+        </motion.form>
       </div>
-      <div className="social-links">
+
+      <motion.div
+        className="social-links"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.8, duration: 0.8 }}
+        viewport={{ once: true }}
+      >
         <a
           href="https://github.com/SayanBanerjee100"
           target="_blank"
@@ -50,7 +182,7 @@ export default function Contact() {
           </svg>
           LinkedIn
         </a>
-      </div>
+      </motion.div>
     </section>
   );
 }
