@@ -7,21 +7,15 @@ export default function Certificates() {
       category: "Achievement"
     },
     {
-      name: "JPMorgan Software Engineering",
-      description: "Worked on practical software engineering challenges, focusing on backend logic, debugging, and system design concepts used in enterprise-scale applications.",
-      file: "/JPMorgan Software Engineering.pdf",
+      name: "AWS Certified Cloud Practitioner",
+      description: "Demonstrates foundational AWS cloud knowledge, including core services, security, pricing, and architectural best practices for cloud-based solutions.",
+      file: "/AWS.pdf",
       category: "Certificate"
     },
     {
       name: "Oracle Cloud AI Foundations",
       description: "Gained foundational knowledge of cloud computing concepts, AI services, machine learning basics, and Oracle Cloud Infrastructure core services.",
       file: "/Oracle Cloud AI Foundations Associate.pdf",
-      category: "Certificate"
-    },
-    {
-      name: "Walmart Certificate",
-      description: "Completed advanced software engineering tasks involving problem-solving, code optimization, and real-world engineering workflows aligned with industry standards.",
-      file: "/Walmart.pdf",
       category: "Certificate"
     }
   ];

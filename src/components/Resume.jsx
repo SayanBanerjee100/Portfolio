@@ -9,7 +9,7 @@ export default function Resume() {
         </div>
 
         <div className="resume-actions">
-          <a href="/Sayan_Banerjee_IEM2027.docx" download className="btn btn-primary">📄 Download Resume</a>
+          <a href="/RESUME.docx" download className="btn btn-primary">📄 Download Resume</a>
         </div>
       </div>
     </section>
