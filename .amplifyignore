@@ -1,0 +1,23 @@
+# Frontend dependencies
+node_modules
+
+# Build artifacts
+dist
+dist-ssr
+*.local
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode
+.idea
+*.suo
+*.ntvs*
+
+# OS
+.DS_Store
+*.swp
+*.swo

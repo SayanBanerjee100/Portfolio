@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "</^[^.]+$|.(?!js$|css$|png$|jpg$|jpeg$|gif$|svg$|ico$|woff$|woff2$|eot$|ttf$|otf$)([^.]+)$/",
+      "destination": "/index.html",
+      "status": 200
+    }
+  ]
+}
