@@ -3,21 +3,21 @@ export default function Education() {
     {
       institution: "Assembly of Angels Secondary School",
       location: "Barrackpore, Kolkata",
-      grade: "85.6%",
+      grade: "84.6%",
       type: "Percentage",
       image: "/images.jpg"
     },
     {
       institution: "St. Augustine's Day School",
       location: "Barrackpore, Kolkata",
-      grade: "85.2%",
+      grade: "81.33%",
       type: "Percentage",
       image: "/images2.jpg"
     },
     {
       institution: "Institute of Engineering and Management",
       location: "Kolkata",
-      grade: "8.5",
+      grade: "7.99",
       type: "CGPA",
       image: "/images3.jpg"
     }
